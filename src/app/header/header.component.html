@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand text-light fw-bolder" routerLink=""><i
+                class="fa-brands fa-slack fa-spin me-2 ms-2"></i>GLOBAL MART</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <div class="d-flex ms-auto">
+                    <a class="nav-link" routerLink="/wishlist">
+                        <button class="btn btn-outline-light">
+                            <i class="fa-solid fa-heart fa-beat"></i> WISHLIST <span class="badge text-bg-secondary ms-1">{{wishlistCount}}</span>
+                        </button>
+                    </a>
+                    <a class="nav-link" routerLink="/cart">
+                        <button class="btn btn-outline-light">
+                            <i class="fa-solid fa-shopping-cart"></i> CART <span class="badge text-bg-secondary ms-1">{{cartCount}}</span>
+                        </button>
+                    </a>
+                    <a class="nav-link" routerLink="user/login" *ngIf="!loginUserName">
+                        <button class="btn btn-outline-light">
+                            <i class="fa-solid fa-user"></i> LOGIN
+                        </button>
+                    </a>
+                    <a class="nav-link" (click)="logout()" *ngIf="loginUserName">
+                        <button class="btn btn-outline-light">
+                            <i class="fa-solid fa-power-off"></i>
+                        </button>
+                        <span class="ms-2 fw-bolder">{{loginUserName | uppercase}}</span>
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</nav>

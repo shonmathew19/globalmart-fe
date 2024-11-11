@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+    <h3 class="mt-5 text-danger">Delivery details</h3>
+
+    <div class="row w-100">
+        <div class="col-md-6 d-flex justify-content-center">
+            <img class="mb-3"
+                src="https://img.freepik.com/premium-vector/express-delivery-service-courier-boy-riding-motor-bike-banner_48369-16679.jpg"
+                alt="" height="" width="80%">
+        </div>
+        <div class="col-md-5 mb-3">
+            <form [formGroup]="checkoutForm" class="rounded border shadow p-5 mt-5">
+                <input type="text" class="form-control mt-3" placeholder="Please enter your name">
+                <input type="text" class="form-control mt-3" placeholder="House/Flat name">
+                <input type="text" class="form-control mt-3" placeholder="Please name">
+                <input type="text" class="form-control mt-3" placeholder="Landmark name">
+                <div class="d-flex justify-content-between mt-3">
+                    <button class="btn btn-outline-danger">CANCEL</button>
+                    <button class="btn btn-outline-success">PROCEED TO PAYMENT</button>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+
+    </div>
+</div>
